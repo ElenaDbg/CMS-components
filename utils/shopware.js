@@ -12,7 +12,7 @@ const shopwareClient = axios.create({
 
 export const fetchShopwareSettings = async () => {
   try {
-    const response = await shopwareClient.get('/settings'); // Adjust endpoint if necessary
+    const response = await shopwareClient.get('/settings'); // endpoint
     console.log('Fetched Shopware Settings:', response.data);
     return response.data;
   } catch (err) {
