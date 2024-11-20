@@ -6,7 +6,7 @@ console.log('Contentful Access Token:', process.env.CONTENTFUL_ACCESS_TOKEN);
 export const contentfulClient = createClient({
   space: process.env.CONTENTFUL_SPACE_ID, // Space ID from environment
   accessToken: process.env.CONTENTFUL_ACCESS_TOKEN, // Access token from environment
-  host: 'preview.contentful.com', // Use Preview API
+  host: 'preview.contentful.com', //  Preview API
 });
 
 export const fetchBannerData = async () => {
@@ -15,7 +15,7 @@ export const fetchBannerData = async () => {
     console.log('Fetched Contentful Data:', response.items);
 
     return response.items.map(item => ({
-      image: item.fields.bannerImage.fields.file.url, // Banner image URL
+      image: item.fields.bannerImage.fields.file.url, // Banner image 
       link: item.fields.linkUrl,                      // Banner link
       start: item.fields.startScheduling,             // Scheduling start
       end: item.fields.endScheduling,                 // Scheduling end
